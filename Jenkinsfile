@@ -13,17 +13,7 @@ pipeline {
     }
 
     stages {
-        stage('GitHub') {
-            steps {
-                echo '-=========- Download Code from GitHub -===============-'
-                git(
-                    url: "https://github.com/MarieLvsq/demo-isika.git",
-                    branch: "master",
-                    changelog: true,
-                    poll: true
-                )
-            }
-        }
+    
         stage('Compile-Package') {
             steps {
                 echo '-=========- Compile and generate jar -===============-'
